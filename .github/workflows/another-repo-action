@@ -1,0 +1,21 @@
+name: another-repo-action
+
+on:
+  workflow_dispatch:
+
+jobs:
+  use-another-repo-action:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Greet before use
+        run: echo Hello! I use the action in another repo!
+      - name: Checkout target repo
+        uses: actions/checkout@v2
+        with:
+          repository: HiromuKinoshita/github-actions-provider
+          ref: main
+          path: .github/actions/other-repository
+      - name: Use the action in the other repository
+        uses: ./.github/actions/other-repository/.github/actions/shared-action
+      - name: Good bye
+        run: echo That's all. Good bye!
