@@ -16,6 +16,6 @@ jobs:
           ref: main
           path: .github/actions/other-repository
       - name: Use the action in the other repository
-        uses: ./.github/actions/other-repository/.github/actions/shared-action
+        uses: ./.github/actions/other-repository/.github/actions/shared
       - name: Good bye
         run: echo That's all. Good bye!
