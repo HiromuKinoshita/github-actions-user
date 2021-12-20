@@ -18,4 +18,4 @@ jobs:
       - name: Use the action in the other repository
         uses: ./.github/actions/other-repository/.github/actions/shared
       - name: Good bye
-        run: echo That's all. Good bye!
+        run: echo That is all. Good bye!
