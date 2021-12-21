@@ -17,5 +17,12 @@ jobs:
           path: .github/actions/other-repository
       - name: Use the action in the other repository
         uses: ./.github/actions/other-repository/.github/actions/shared
+  use-reusable-workflow:
+    uses: HiromuKinoshita/github-actions-provider/.github/workflows/reusable.yml@main
+    with:
+      reponame: ${{ github.repository }}
+  finish:
+    runs-on: ubuntu-latest
+    steps:
       - name: Good bye
         run: echo That is all. Good bye!
