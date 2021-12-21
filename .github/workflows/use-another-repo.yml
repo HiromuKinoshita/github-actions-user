@@ -1,4 +1,4 @@
-name: another-repo-action
+name: use-another-repo
 
 on:
   workflow_dispatch:
