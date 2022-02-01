@@ -17,7 +17,6 @@ jobs:
           path: .github/actions/other-repository
       - name: Use the action in the other repository
         uses: ./.github/actions/other-repository/.github/actions/shared
-      - name: Try to use a reusable workflow locally
   use-reusable-workflow:
     uses: HiromuKinoshita/github-actions-provider/.github/workflows/reusable.yml@main
     with:
