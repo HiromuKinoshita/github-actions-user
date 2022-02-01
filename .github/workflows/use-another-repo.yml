@@ -22,7 +22,7 @@ jobs:
     with:
       reponame: ${{ github.repository }}
   use-reusable-workflow-locally:
-    uses: ./.github/actions/other-repository/.github/workflows/reusable.yml
+    uses: ./.github/actions/other-repository/.github/workflows/reusable.yml@main
     with:
       reponame: ${{ github.repository }}
   finish:
