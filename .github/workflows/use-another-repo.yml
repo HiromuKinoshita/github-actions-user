@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Predict run time
         id: predict_run_time
-        uses: jerome-1010/workflow-time-predictor@v0
+        uses: jerome-1010/workflow-time-predictor@main
         with:
           token: GITHUB_TOKEN
           owner: GITHUB_REPOSITORY_OWNER
