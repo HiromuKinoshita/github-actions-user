@@ -31,10 +31,11 @@ jobs:
     uses: Jerome-1010/github-actions-provider/.github/workflows/reusable.yml@main
     with:
       reponame: ${{ github.repository }}
-  use-reusable-workflow-locally:
-    uses: ./.github/actions/other-repository/.github/workflows/reusable.yml@main
-    with:
-      reponame: ${{ github.repository }}
+# 　　　　動作しないことを確認済み
+#   use-reusable-workflow-locally:
+#     uses: './.github/actions/other-repository/.github/workflows/reusable.yml@main'
+#     with:
+#       reponame: ${{ github.repository }}
   finish:
     runs-on: ubuntu-latest
     steps:
