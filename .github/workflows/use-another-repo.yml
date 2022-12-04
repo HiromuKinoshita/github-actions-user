@@ -11,7 +11,7 @@ jobs:
         id: predict_run_time
         uses: jerome-1010/workflow-time-predictor@main
         with:
-          token: GITHUB_TOKEN
+          token: secrets.GITHUB_TOKEN
           owner: GITHUB_REPOSITORY_OWNER
           repository: GITHUB_REPOSITORY
           run-id: GITHUB_RUN_ID
