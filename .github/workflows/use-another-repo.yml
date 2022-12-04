@@ -7,6 +7,16 @@ jobs:
   use-another-repo-action:
     runs-on: ubuntu-latest
     steps:
+      - name: Predict run time
+        id: predict_run_time
+        uses: jerome-1010/workflow-time-predictor@v1
+        with:
+          token: GITHUB_TOKEN
+          owner: GITHUB_REPOSITORY_OWNER
+          repository: GITHUB_REPOSITORY
+          run-id: GITHUB_RUN_ID
+      - name: Noti expected run time
+        run: echo "This workflow takes ${{steps.predict_run_time.outputs.succeed_average_time}} minutes if successful! If failed, this will fininsh in ${{steps.predict_run_time.outputs.failure_average_time}} on average.
       - name: Greet before use
         run: echo Hello! I use the action in another repo!
       - name: Checkout target repo
