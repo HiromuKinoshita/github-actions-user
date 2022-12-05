@@ -14,7 +14,7 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           owner: ${{ github.repository_owner }}
           repository: ${{ github.repository }}
-          workflow-file-name: "use-another-repo"
+          workflow-file-name: "use-another-repo.yml"
       - name: Noti expected run time
         run: echo "This workflow takes ${{steps.predict_run_time.outputs.succeed_average_time}} minutes if successful! If failed, this will fininsh in ${{steps.predict_run_time.outputs.failure_average_time}} on average.
       - name: Greet before use
