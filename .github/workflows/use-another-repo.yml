@@ -16,16 +16,15 @@ jobs:
           repository: ${{ github.repository }}
           workflow-file-name: "use-another-repo.yml"
       - name: Noti expected run time
-        run: echo "
-          succeed_median_time  ${{steps.predict_run_time.outputs.succeed_median_time}}
-          succeed_average_time ${{steps.predict_run_time.outputs.succeed_average_time}}
-          succeed_max_time     ${{steps.predict_run_time.outputs.succeed_max_time}}
-          succeed_min_time     ${{steps.predict_run_time.outputs.succeed_min_time}}
-          failure_median_time  ${{steps.predict_run_time.outputs.failure_median_time}}
-          failure_average_time ${{steps.predict_run_time.outputs.failure_average_time}}
-          failure_max_time     ${{steps.predict_run_time.outputs.failure_max_time}}
-          failure_min_time     ${{steps.predict_run_time.outputs.failure_min_time}}
-          "
+        run: echo "\n
+          succeed_median_time  ${{steps.predict_run_time.outputs.succeed_median_time}}\n
+          succeed_average_time ${{steps.predict_run_time.outputs.succeed_average_time}}\n
+          succeed_max_time     ${{steps.predict_run_time.outputs.succeed_max_time}}\n
+          succeed_min_time     ${{steps.predict_run_time.outputs.succeed_min_time}}\n
+          failure_median_time  ${{steps.predict_run_time.outputs.failure_median_time}}\n
+          failure_average_time ${{steps.predict_run_time.outputs.failure_average_time}}\n
+          failure_max_time     ${{steps.predict_run_time.outputs.failure_max_time}}\n
+          failure_min_time     ${{steps.predict_run_time.outputs.failure_min_time}}"
       - name: Greet before use
         run: echo Hello! I use the action in another repo!
       - name: Checkout target repo
